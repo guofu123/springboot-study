@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>修改账单</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+    <script type="text/javascript" th:src="@{/js/My97DatePicker/WdatePicker.js}"></script>
+    <script type="text/javascript" src="/js/My97DatePicker/lang/zh-cn.js"></script>
+</head>
+<body class="container">
+<br/>
+<h1>修改账单</h1>
+<br/><br/>
+<div class="with:80%">
+	<!-- TODO  回显数据 --> 
+    <form class="form-horizontal" action="/bill" th:method="put">
+        <div class="form-group" style="display: none">
+            <label for="typeId" class="col-sm-2 control-label">账单id</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="id" id="billId" placeholder="标题" th:value="${oldBill.id}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="typeId" class="col-sm-2 control-label">类型</label>
+            <div class="col-sm-10">
+                <select name="typeId" id="typeId" class="form-control">
+                    <option value="">全部</option>
+                    <option th:each="billType : ${billTypes}" th:object="${billType}" th:value="*{id}" th:text="*{name}" th:selected="*{id}==${oldBill.typeId}"></option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-sm-2 control-label" >标题</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="title" id="title" placeholder="标题" th:value="${oldBill.title}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="billTime" class="col-sm-2 control-label">日期</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="billTime"  id="billTime" placeholder="日期" th:value="${#dates.format(oldBill.billTime,'yyyy-MM-dd')}" onclick="WdatePicker()"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price" class="col-sm-2 control-label">金额</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="price"  id="price" placeholder="金额" th:value="${oldBill.price}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="explain" class="col-sm-2 control-label">说明</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="explain" id="explain" placeholder="说明" th:value="${oldBill.explain}"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="保存" class="btn btn-info" />
+                &nbsp; &nbsp; &nbsp;
+                <input type="reset" value="重置" class="btn btn-info" />
+            </div>
+
+        </div>
+    </form>
+</div>
+</body>
+</html>

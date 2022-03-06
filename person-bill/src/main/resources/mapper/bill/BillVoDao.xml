@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kkb.ggf.bill.dao.BillVoDao">
+    
+    <sql id="baseSql">
+        b.id_ id,
+        b.title_ title,
+        b.bill_time_ billTime,
+        b.type_id_ typeId,
+        b.price_ price,
+        b.explain_ `explain`,
+        bt.name_ `typeName`
+    </sql>
+
+
+    <!-- 分页查询，关联类型,日期范围查询使用 DATE_FORMAT格式化日期 -->
+    <select id="getBillPage" resultType="com.kkb.ggf.bill.pojo.BillVo">
+        select <include refid="baseSql"/>
+        FROM bill_ b
+        LEFT JOIN `bill_type_` bt ON b.type_id_ = bt.id_
+        <where>
+            <if test="title!=null and title!=''">
+                b.title_ like concat('%',concat(#{title},'%'))
+            </if>
+            <if test="typeId!=null">
+                b.type_id_ = #{typeId}
+            </if>
+
+            <if test="startTime!=null">
+                <![CDATA[ AND  DATE_FORMAT(b.bill_time_,'%y-%m-%d') >=  DATE_FORMAT(#{startTime},'%y-%m-%d') ]]>
+            </if>
+            <if test="endTime!=null">
+                <![CDATA[ AND  DATE_FORMAT(b.bill_time_,'%y-%m-%d') <=  DATE_FORMAT(#{endTime},'%y-%m-%d') ]]>
+            </if>
+
+        </where>
+        order by b.bill_time_ desc
+    </select>
+    
+</mapper>

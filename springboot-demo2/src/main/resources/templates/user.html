@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查询用户</title>
+    <style type="text/css"> table {
+        border-collapse: collapse;
+        font-size: 14px;
+        width: 80%;
+        margin: auto
+    }
+
+    table, th, td {
+        border: 1px solid darkslategray;
+        padding: 10px
+    } </style>
+</head>
+<body>
+<div style="text-align: center"><span style="color: darkslategray; font-size: 30px">欢迎光临！</span>
+    <hr/>
+    <table class="list">
+        <tr>
+            <th>id</th>
+            <th>姓名</th>
+            <th>用户名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>生日</th>
+            <th>备注</th>
+            <th>操作</th>
+        </tr>
+        <tr th:each="u : ${users}">
+            <td th:text="${u.id}">1</td>
+            <td th:text="${u.name}">李四</td>
+            <td th:text="${u.userName}">lisi</td>
+            <td th:text="${u.age}">18</td>
+            <td th:text="${u.sex}==1?'男':'女'">男</td>
+            <td th:text="${#dates.format(u.birthday,'yyyy-MM-dd')}">1998-09-02</td>
+            <td th:text="${u.note}">是一个好学的学生....</td>
+            <td>
+                <a href="#" >删除</a>
+                <a href="#" >修改</a>
+                <a href="#" >审核</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

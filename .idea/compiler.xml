@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-demo2" />
+        <module name="springboot-demo1" />
+        <module name="myTravel" />
+        <module name="person-bill" />
+        <module name="mybatis-plus-demo-quickstart" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-plus-demo-quickstart" target="1.8" />
+      <module name="myTravel" target="1.8" />
+      <module name="person-bill" target="1.8" />
+      <module name="springboot-demo1" target="1.8" />
+      <module name="springboot-demo2" target="1.8" />
+      <module name="springboot-demp1" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="myTravel" options="-parameters" />
+      <module name="mybatis-plus-demo-quickstart" options="-parameters" />
+      <module name="person-bill" options="-parameters" />
+      <module name="springboot-demo1" options="-parameters" />
+      <module name="springboot-demo2" options="-parameters" />
+    </option>
+  </component>
+</project>
