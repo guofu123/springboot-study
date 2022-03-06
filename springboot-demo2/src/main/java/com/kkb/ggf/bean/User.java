@@ -1,11 +1,6 @@
 package com.kkb.ggf.bean;
 
-import jdk.jfr.Name;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -19,7 +14,7 @@ public class User implements Serializable {
     private Long id;
     // 用户名
     // 自动转换下换线到驼峰命名user_name -> userName, jdbc和tk.myabtis支持
-    @Name("user_name")
+    @Column(name = "user_name")
     private String userName;
     // 密码
     private String password;

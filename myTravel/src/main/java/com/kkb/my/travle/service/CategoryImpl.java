@@ -1,8 +1,9 @@
 package com.kkb.my.travle.service;
 
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kkb.my.travle.dao.CategoryDao;
 import com.kkb.my.travle.domain.Category;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @Service
 public class CategoryImpl implements CategoryService {
 
+    @Autowired
     private CategoryDao categoryDao;
 
     /**
@@ -21,7 +23,9 @@ public class CategoryImpl implements CategoryService {
      */
     @Override
     public List<Category> list() {
-        return categoryDao.selectList(Wrappers.query());
+        QueryWrapper<Category> categoryQueryWrapper = new QueryWrapper<>();
+        categoryQueryWrapper.orderByAsc("cid");
+        return categoryDao.selectList(categoryQueryWrapper);
     }
 
     @Override

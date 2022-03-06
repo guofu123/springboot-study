@@ -60,7 +60,7 @@ public class CategoryController {
     }
 
     @RequestMapping("/delete/{cid}")
-    public String delete(Integer cid){
+    public String delete(@PathVariable("cid") Integer cid){
         categoryService.delete(cid);
         return  "redirect:/admin/category/list";
     }

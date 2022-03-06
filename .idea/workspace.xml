@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7e591b9-692a-4704-a04a-e7be25d745ff" name="Changes" comment="" />
+    <list default="true" id="f7e591b9-692a-4704-a04a-e7be25d745ff" name="Changes" comment="完成列旅游管理中的分类管理">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/service/CategoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/service/CategoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/target/classes/templates/category/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/target/classes/templates/category/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/target/classes/templates/category/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/target/classes/templates/category/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/target/classes/templates/category/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/target/classes/templates/category/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-demo2/src/main/java/com/kkb/ggf/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-demo2/src/main/java/com/kkb/ggf/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-demo2/target/classes/com/kkb/ggf/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-demo2/target/classes/com/kkb/ggf/bean/User.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +32,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -44,6 +60,7 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="21CzVdtZcYfQZYtt1N3gm1SNI1C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,7 +81,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.249501" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.23594378" />
   </component>
   <component name="RecentsManager">
@@ -228,6 +245,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成列旅游管理中的分类管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成列旅游管理中的分类管理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

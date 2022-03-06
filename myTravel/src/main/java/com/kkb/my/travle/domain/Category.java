@@ -1,5 +1,6 @@
 package com.kkb.my.travle.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -10,7 +11,7 @@ import lombok.Data;
 @Data
 @TableName("tab_category")
 public class Category {
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Integer cid;
     private String cname;
 }
