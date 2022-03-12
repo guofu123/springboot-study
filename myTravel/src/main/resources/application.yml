@@ -4,7 +4,7 @@ server:
     context-path: /
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/travel?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/travel?useSSL=false&useUnicode=true&characterEncoding=UTF-8&AllowPublicKeyRetrieval=True
     username: root
     password: 310015
     driver-class-name: com.mysql.jdbc.Driver
@@ -21,3 +21,4 @@ mybatis-plus:
   configuration:
     lazy-loading-enabled: true #打开懒加载
     aggressive-lazy-loading: false #关闭积极懒加载
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打开sql日志输出

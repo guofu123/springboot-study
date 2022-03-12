@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="person-bill@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.31">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.32">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -999,71 +999,71 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Charset>utf8mb4</Charset>
     </collation>
     <schema id="274" parent="1" name="bookstore">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="275" parent="1" name="estation">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="276" parent="1" name="information_schema">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="277" parent="1" name="management">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="278" parent="1" name="mybatis">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="279" parent="1" name="mysql">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="280" parent="1" name="performance_schema">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="281" parent="1" name="person-bill">
-      <Collation>utf8_general_ci</Collation>
       <Current>1</Current>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="282" parent="1" name="ruoyi">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="283" parent="1" name="ry">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="284" parent="1" name="scheduleddb">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="285" parent="1" name="school">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="286" parent="1" name="sd_hospital">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="287" parent="1" name="servlet">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="288" parent="1" name="spirngjdbc">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="289" parent="1" name="springboot">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="290" parent="1" name="ssm_kkb">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="291" parent="1" name="ssm_srud">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="292" parent="1" name="sys">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="tdss">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="294" parent="1" name="test">
-      <Collation>latin1_swedish_ci</Collation>
+      <CollationName>latin1_swedish_ci</CollationName>
     </schema>
     <schema id="295" parent="1" name="webgame">
-      <Collation>utf8_general_ci</Collation>
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <user id="296" parent="1" name="guofu">
       <Plugin>caching_sha2_password</Plugin>

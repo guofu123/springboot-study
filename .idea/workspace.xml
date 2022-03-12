@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7e591b9-692a-4704-a04a-e7be25d745ff" name="Changes" comment="完成列旅游管理中的分类管理">
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/controller/SellerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/dao/RouteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/dao/SellerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/domain/Route.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/domain/RouteImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/domain/Seller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/service/SellerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/service/SellerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e0fbd205-4e5d-415d-b202-effff600bd7f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e0fbd205-4e5d-415d-b202-effff600bd7f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/domain/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/service/CategoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/service/CategoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/category/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/target/classes/templates/category/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/target/classes/templates/category/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/target/classes/templates/category/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/target/classes/templates/category/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myTravel/target/classes/templates/category/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/target/classes/templates/category/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-demo2/src/main/java/com/kkb/ggf/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-demo2/src/main/java/com/kkb/ggf/bean/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-demo2/target/classes/com/kkb/ggf/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-demo2/target/classes/com/kkb/ggf/bean/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/seller/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/seller/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/seller/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/seller/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/seller/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/seller/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/user/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -81,7 +91,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.249501" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.textmate.bundles" />
     <property name="settings.editor.splitter.proportion" value="0.23594378" />
   </component>
   <component name="RecentsManager">
@@ -240,7 +250,17 @@
       <workItem from="1645622614203" duration="5384000" />
       <workItem from="1645795559362" duration="13000" />
       <workItem from="1645924138346" duration="9996000" />
+      <workItem from="1647047655759" duration="938000" />
+      <workItem from="1647048604957" duration="7063000" />
     </task>
+    <task id="LOCAL-00001" summary="完成列旅游管理中的分类管理">
+      <created>1646546576757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646546576757</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,5 +284,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/springboot_study$MyTravelApplication.ic" NAME="MyTravelApplication Coverage Results" MODIFIED="1647047733084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.kkb.my.travle.*</FILTER>
+    </SUITE>
   </component>
 </project>
