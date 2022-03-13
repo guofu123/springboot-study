@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7e591b9-692a-4704-a04a-e7be25d745ff" name="Changes" comment="完成列旅游管理中的公司管理" />
+    <list default="true" id="f7e591b9-692a-4704-a04a-e7be25d745ff" name="Changes" comment="完成列旅游管理中的路线管理">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/controller/RouteImgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/java/com/kkb/my/travle/controller/RouteImgController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTravel/src/main/resources/templates/route/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/myTravel/src/main/resources/templates/route/image.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +19,7 @@
       <list>
         <option value="HTML File" />
         <option value="JUnit4 Test Class" />
+        <option value="MybatisXml" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -69,11 +74,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.obroom.plugin.mybatislog.indexNum" value="4256" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.249501" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.textmate.bundles" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.23594378" />
   </component>
   <component name="RecentsManager">
@@ -233,7 +239,9 @@
       <workItem from="1645795559362" duration="13000" />
       <workItem from="1645924138346" duration="9996000" />
       <workItem from="1647047655759" duration="938000" />
-      <workItem from="1647048604957" duration="7367000" />
+      <workItem from="1647048604957" duration="10508000" />
+      <workItem from="1647073844895" duration="3677000" />
+      <workItem from="1647130102081" duration="21811000" />
     </task>
     <task id="LOCAL-00001" summary="完成列旅游管理中的分类管理">
       <created>1646546576757</created>
@@ -256,7 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647070644021</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="完成列旅游管理中的公司管理">
+      <created>1647070685014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647070685014</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完成列旅游管理中的路线管理">
+      <created>1647160105827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647160105827</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +298,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成列旅游管理中的分类管理" />
     <MESSAGE value="完成列旅游管理中的公司管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成列旅游管理中的公司管理" />
+    <MESSAGE value="完成列旅游管理中的路线管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成列旅游管理中的路线管理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

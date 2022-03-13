@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -13,11 +14,12 @@ import java.util.List;
  */
 @Data
 @TableName("tab_route")
-public class Route {
+public class Route implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer rid;
     private String rname;
     private Double price;
+    @TableField("routeIntroduce")
     private String routeIntroduce;
     // 0代表没有上架，1代表是上架
     private String rflag;

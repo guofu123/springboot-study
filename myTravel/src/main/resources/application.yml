@@ -14,6 +14,18 @@ spring:
       minimum-idle: 10
   thymeleaf:
     cache: false
+  # 设置静态文件的路径
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations:
+      - classpath:/META-INF/resources/
+      - classpath:/static
+      - classpath:/resources/
+      - file:${mytravel.uploadPath}
+mytravel:
+  # 文件上传的路径
+  uploadPath: D:/projects/myTralvel
 # mybatis plus配置
 mybatis-plus:
   mapper-locations: classpath:/mybatis/*.xml #加载映射文件

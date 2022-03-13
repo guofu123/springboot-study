@@ -89,9 +89,9 @@
                     </li>
 
                     <li>
-                        <a href="#">用户</a>
+                        <a href="#">旅游路线</a>
                     </li>
-                    <li class="active">用户管理</li>
+                    <li class="active">旅游路线管理</li>
                 </ul><!-- /.breadcrumb -->
 
             </div>
@@ -111,7 +111,7 @@
                         <div class="form-group">
                             <label for="routeIntroduce">线路介绍</label>
                             <input type="text" name="routeIntroduce" class="form-control" id="routeIntroduce"
-                                   th:value="${param.email}">
+                                   th:value="${param.routeIntroduce}">
                         </div>
 
 
@@ -119,7 +119,9 @@
                             <label for="cid">所属分类：</label>
                             <select class="form-control" id="cid" name="cid">
                                 <option value="">全部</option>
-								<!-- TODO 回显数据 -->
+								<!-- 回显数据 -->
+                                <option th:each="cate : ${categories}" th:value="${cate.cid}" th:text="${cate.cname}"
+                                        th:selected="${param.cid} == ${cate.cid}"></option>
                             </select>
                         </div>
 
@@ -127,14 +129,16 @@
                             <label for="cid">旅游公司：</label>
                             <select class="form-control" id="sid" name="sid">
                                 <option value="">全部</option>
-								<!-- TODO 回显数据 -->
+								<!-- 回显数据 -->
+                                <option th:each="seller : ${sellers}" th:value="${seller.sid}" th:text="${seller.sname}"
+                                        th:selected="${param.sid} == ${seller.sid}"></option>
                             </select>
                         </div>
 
 
                         <button type="submit" class="btn btn-sm btn-default">查询</button>
                         <button type="button" class="btn btn-sm btn-default"
-                                onclick="location.href='/admin/route/toadd'">添加
+                                onclick="location.href='/admin/route/toAdd'">添加
                         </button>
                     </form>
                 </div>
@@ -157,8 +161,8 @@
                     <tr th:each="u: ${page.list}">
                         <td><input type="checkbox" name="ids" th:value="${u.rid}"></td>
                         <td th:text="${u.rid}"></td>
-						<!-- TODO 30个字符串以上显示... -->
-                        <td></td>
+						<!-- 30个字符串以上显示... -->
+                        <td th:text="${u.rname}" class="overflow-hidden"></td>
                         <td th:text="${u.category.cname}"></td>
                         <td th:text="${u.seller.sname}"></td>
                         <td th:text="${u.price}"></td>
@@ -166,17 +170,17 @@
 
                             <div class="hidden-sm hidden-xs btn-group">
                                 <button class="btn btn-xs btn-info"
-                                        th:onclick="|location.href = '/admin/route/toupdate?id=${u.rid}'|">
+                                        th:onclick="|location.href = '/admin/route/toUpdate/${u.rid}'|">
                                     <i class="ace-icon fa fa-pencil bigger-120"></i>
                                 </button>
 
                                 <button class="btn btn-xs btn-info"
-                                        th:onclick="|location.href = '/admin/route/delete?id=${u.rid}'|">
+                                        th:onclick="|location.href = '/admin/route/delete/${u.rid}'|">
                                     <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                 </button>
 
                                 <button class="btn btn-xs btn-success"
-                                        th:onclick="|location.href = '/admin/route/toimage?id=${u.rid}'|">
+                                        th:onclick="|location.href = '/admin/route/toImage/${u.rid}'|">
                                     <i class="ace-icon fa fa-image bigger-120"></i>
                                 </button>
                             </div>
@@ -228,7 +232,69 @@
                         </ul>
                     </nav>
                 </div>
-					<!-- TODO 分页js -->
+					<!-- 分页js -->
+
+                <!-- 分页 -->
+                <script th:inline="javascript">
+                    // 得到分页数据
+                    let pageNum = [[${page.pageNum}]];
+                    let pageSize = [[${page.pageSize}]];
+                    let pages = [[${page.pages}]];
+                    let hasPrePage = [[${page.hasPreviousPage}]];
+                    let hasNextPage = [[${page.hasNextPage}]];
+
+                    // 首页和末页的disabled
+                    if (!hasPrePage){
+                        $("#first").addClass('disabled');
+                        $("#prev").addClass('disabled');
+                    }
+                    if (!hasNextPage){
+                        $("#last").addClass('disabled');
+                        $("#next").addClass('disabled');
+                    }
+                    // 上一页
+                    $("#prev").click(function () {
+                        if (hasPrePage){
+                            submitPageData(pageNum - 1)
+                        }
+                    });
+                    // 下一页
+                    $("#next").click(function (){
+                        if (hasNextPage){
+                            submitPageData(pageNum + 1);
+                        }
+                    });
+                    // 第一页和最后一页
+                    $("#first").click(function () {
+                        if (hasPrePage){
+                            submitPageData(1);
+                        }
+                    });
+                    $("#last").click(function () {
+                        if (hasNextPage){
+                            submitPageData(pages);
+                        }
+                    });
+                    // 页码跳转
+                    $("li[name='pageNum']").click(function () {
+                        if (!$(this).hasClass("active")){
+                            submitPageData($(this).children("a").html())
+                        }
+                    });
+
+                    // 设置每页的行数
+                    $("#setRows").change(function () {
+                        $("#pageSize").val($(this).val());
+                        $("#pageNum").val(1);
+                        submitPageData(1);
+                    });
+
+                    // 分页数据提交
+                    function submitPageData(pageNum) {
+                        $("#pageNum").val(pageNum);
+                        $("#qf").submit();
+                    }
+                </script>
 				
 	
             </div><!-- /.page-content -->

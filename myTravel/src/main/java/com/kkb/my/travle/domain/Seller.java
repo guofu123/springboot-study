@@ -5,12 +5,14 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 所属商家
  */
 @Data
 @TableName("tab_seller")
-public class Seller {
+public class Seller implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer sid;
     private String sname;

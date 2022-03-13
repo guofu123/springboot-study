@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <title>商品详细图片</title>
+    <title>路线详细图片</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
@@ -94,18 +94,18 @@
                     </li>
 
                     <li>
-                        <a href="#">用户</a>
+                        <a href="#">路线详细图片</a>
                     </li>
-                    <li class="active">用户管理</li>
+                    <li class="active">编辑路线详细图片</li>
                 </ul><!-- /.breadcrumb -->
 
             </div>
 
             <div class="page-content">
 
-                <form action="/admin/route/doimage" enctype="multipart/form-data" method="post">
-					<!-- TODO 处理隐藏域，记录线路ID -->
-
+                <form action="/admin/route/saveImgs" enctype="multipart/form-data" method="post">
+					<!--  处理隐藏域，记录线路ID -->
+                    <input type="hidden" name="rid" th:value="${route.rid}">
                     <div class="form-group">
                         <label for="bigPicFile">详细大图：</label>
                         <input id="bigPicFile" name="bigPicFile" type="file" multiple >
@@ -123,8 +123,29 @@
                 </form>
 
             </div><!-- /.page-content -->
-			<!-- TODO 处理详细图片回显 -->
+			<!-- 处理详细图片回显，上传的大图和小图数量要相等 -->
+            <script th:inline="javascript">
+                let imgList = [[${route.routeImgList}]];
+                let bi = [];   // 回显大图
+                let si = [];   // 回显小图
+                imgList.forEach(function (item){
+                    bi.push("<img src='/" + item.bigpic + "' class='file-preview-image' >");
+                    si.push("<img src='/" + item.smallpic + "' class='file-preview-image' >");
+                });
+                $("#bigPicFile").fileinput({
+                    initialPreview: bi,
+                    overwriteInitial: true,
+                    minFileCount: 1,
+                    maxFileCount: 4
+                });
+                $("#smallPicFile").fileinput({
+                    initialPreview: si,
+                    overwriteInitial: true,
+                    minFileCount: 1,
+                    maxFileCount: 4
+                })
 
+            </script>
         </div>
     </div><!-- /.main-content -->
 

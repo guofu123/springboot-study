@@ -95,16 +95,16 @@
                     </li>
 
                     <li>
-                        <a href="#">用户</a>
+                        <a href="#">旅游路线</a>
                     </li>
-                    <li class="active">用户管理</li>
+                    <li class="active">添加旅游路线</li>
                 </ul><!-- /.breadcrumb -->
 
             </div>
 
             <div class="page-content">
-				<!-- TODO 文件上传表单设置 -->
-                <form >
+				<!-- 文件上传表单设置 -->
+                <form action="/admin/route/add" enctype="multipart/form-data" method="post" >
                     <div class="form-group">
                         <label for="rname">线路名称：</label>
                         <input type="text" class="form-control" id="rname" name="rname" placeholder="请输入线路名称">
@@ -118,14 +118,16 @@
                     <div class="form-group">
                         <label for="cid">所属分类：</label>
                         <select class="form-control" id="cid" name="cid">
-						<!-- TODO 回显数据 -->
+						<!-- 回显数据 -->
+                            <option th:each=" cate: ${categories}" th:object="${cate}" th:value="*{cid}" th:text="*{cname}"></option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="cid">旅游公司：</label>
                         <select class="form-control" id="sid" name="sid">
-						<!-- TODO 回显数据-->
+						<!-- 回显数据-->
+                            <option th:each=" seller: ${sellers}" th:value="${seller.sid}" th:text="${seller.sname}"></option>
                         </select>
                     </div>
 
@@ -136,8 +138,8 @@
 
                     <div class="form-group">
                         <label for="rimageFile">缩略图：</label>
-						<!-- TODO 转换成fileinput -->
-                        <input id="rimageFile" name="rimageFile" type="file" >
+						<!-- 转换成fileinput -->
+                        <input id="rimageFile" name="rimageFile" class="file" type="file" >
                     </div>
 
                     <div class="form-group" style="text-align: center">
@@ -146,12 +148,20 @@
                         <input class="btn btn-default" type="button" value="返回" />
                     </div>
                 </form>
-
             </div><!-- /.page-content -->
         </div>
     </div><!-- /.main-content -->
 
 </div><!-- /.main-container -->
+
+    <script>
+        /* 图片上传 */
+        $(function () {
+            $("#rimageFile").fileinput({
+
+            })
+        })
+    </script>
 
 </body>
 </html>
